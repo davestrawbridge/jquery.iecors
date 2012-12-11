@@ -25,6 +25,7 @@
             complete(200, 'OK', { text: xdr.responseText }, headers);
           };
           
+          xdr.onprogress = function () { };	// prevent IE9 aborting request
           // Apply custom fields if provided
 					if ( s.xhrFields ) {
             xhr.onerror = s.xhrFields.error;
